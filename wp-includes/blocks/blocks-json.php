@@ -601,6 +601,91 @@
       )
     )
   ),
+  'breadcrumbs' => array(
+    '$schema' => 'https://schemas.wp.org/trunk/block.json',
+    'apiVersion' => 3,
+    'name' => 'core/breadcrumbs',
+    'title' => 'Breadcrumbs',
+    'category' => 'theme',
+    'description' => 'Display a breadcrumb trail showing the path to the current page.',
+    'textdomain' => 'default',
+    'attributes' => array(
+      'prefersTaxonomy' => array(
+        'type' => 'boolean',
+        'default' => false
+      ),
+      'separator' => array(
+        'type' => 'string',
+        'default' => '/'
+      ),
+      'showHomeItem' => array(
+        'type' => 'boolean',
+        'default' => true
+      ),
+      'showCurrentItem' => array(
+        'type' => 'boolean',
+        'default' => true
+      ),
+      'showOnHomePage' => array(
+        'type' => 'boolean',
+        'default' => false
+      )
+    ),
+    'usesContext' => array(
+      'postId',
+      'postType',
+      'templateSlug'
+    ),
+    'supports' => array(
+      'anchor' => true,
+      'html' => false,
+      'align' => array(
+        'wide',
+        'full'
+      ),
+      'spacing' => array(
+        'margin' => true,
+        'padding' => true
+      ),
+      'color' => array(
+        'gradients' => true,
+        'link' => true,
+        '__experimentalDefaultControls' => array(
+          'background' => true,
+          'text' => true
+        )
+      ),
+      '__experimentalBorder' => array(
+        'radius' => true,
+        'color' => true,
+        'width' => true,
+        'style' => true,
+        '__experimentalDefaultControls' => array(
+          'radius' => false,
+          'color' => true,
+          'width' => true,
+          'style' => true
+        )
+      ),
+      'typography' => array(
+        'fontSize' => true,
+        'lineHeight' => true,
+        '__experimentalFontFamily' => true,
+        '__experimentalFontWeight' => true,
+        '__experimentalFontStyle' => true,
+        '__experimentalTextTransform' => true,
+        '__experimentalTextDecoration' => true,
+        '__experimentalLetterSpacing' => true,
+        '__experimentalDefaultControls' => array(
+          'fontSize' => true
+        )
+      ),
+      'interactivity' => array(
+        'clientNavigation' => true
+      )
+    ),
+    'style' => 'wp-block-breadcrumbs'
+  ),
   'button' => array(
     '$schema' => 'https://schemas.wp.org/trunk/block.json',
     'apiVersion' => 3,
